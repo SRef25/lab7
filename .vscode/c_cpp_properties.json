@@ -1,0 +1,80 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/Users/samrefahiyat/lab7/include",
+                "/Users/samrefahiyat/lab7/src",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/include",
+                "/Users/samrefahiyat/lab7/.pio/build/disco_f072rb/zephyr/include/generated",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/soc/arm/st_stm32/stm32f0",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/drivers",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/soc/arm/st_stm32/common",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/cmsis/CMSIS/Core/Include",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/soc",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include/Legacy",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/common_ll/include",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/samrefahiyat/lab7/include",
+                    "/Users/samrefahiyat/lab7/src",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/include",
+                    "/Users/samrefahiyat/lab7/.pio/build/disco_f072rb/zephyr/include/generated",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/soc/arm/st_stm32/stm32f0",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/drivers",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/soc/arm/st_stm32/common",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/cmsis/CMSIS/Core/Include",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/soc",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include/Legacy",
+                    "/Users/samrefahiyat/.platformio/packages/framework-zephyr/_pio/modules/hal/stm32/stm32cube/common_ll/include",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60111",
+                "STM32F072xB",
+                "BUILD_VERSION=zephyr-v20701",
+                "HSE_VALUE=8000000",
+                "KERNEL",
+                "STM32F072xB",
+                "USE_FULL_LL_DRIVER",
+                "USE_HAL_DRIVER",
+                "_FORTIFY_SOURCE=2",
+                "__PROGRAM_START",
+                "__ZEPHYR__=1",
+                ""
+            ],
+            "cStandard": "c99",
+            "forcedInclude": [
+                "/Users/samrefahiyat/lab7/.pio/build/disco_f072rb/zephyr/include/generated/autoconf.h",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/include/toolchain/zephyr_stdint.h",
+                ""
+            ],
+            "compilerPath": "/Users/samrefahiyat/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m0",
+                "-mthumb",
+                "-mabi=aapcs",
+                "-mfp16-format=ieee",
+                "-isystem",
+                "/Users/samrefahiyat/.platformio/packages/framework-zephyr/lib/libc/minimal/include",
+                "-isystem",
+                "/Users/samrefahiyat/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include",
+                "-isystem",
+                "/Users/samrefahiyat/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include-fixed",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
