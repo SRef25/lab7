@@ -83,7 +83,7 @@ int main(){
         .rtr = CAN_DATAFRAME,
         .id = 0x156,
         .dlc =8,
-        .data={8,7,6,5,5,6,7,8}
+        .data={5,4,6,8,4,5,1,3}
     };
 
     //activity 0
@@ -112,7 +112,7 @@ int main(){
         .dlc =8,
         .data={1,2,3,4,5,6,7,8}
     };
-    struct zcan_frame quiet = {
+   struct zcan_frame quiet = {
         .id_type = CAN_STANDARD_IDENTIFIER,
         .rtr = CAN_DATAFRAME,
         .id = 0x123,
@@ -124,8 +124,8 @@ int main(){
    
     can_dev = device_get_binding("CAN_1");
     //Comment out loop back line for activity 2
-    can_set_mode(can_dev, CAN_NORMAL_MODE);
-    //can_set_mode(can_dev, CAN_LOOPBACK_MODE);
+   can_set_mode(can_dev, CAN_NORMAL_MODE);
+   // can_set_mode(can_dev, CAN_LOOPBACK_MODE);
     
     //activity 0
     //filter_id = can_attach_isr(can_dev, rx_callback_function, NULL, &my_filter);
@@ -148,17 +148,18 @@ int main(){
         
         //activity 1
         //k_sleep(K_MSEC(1000));
-        //activity0(can_dev, &frame, K_MSEC(100), NULL, NULL);
-        //k_sleep(K_MSEC(1000));
-        //activity0(can_dev, &frame2, K_MSEC(100), NULL, NULL);
+        activity0(can_dev, &frame, K_MSEC(100), NULL, NULL);
+       k_sleep(K_MSEC(1000));
+       activity0(can_dev, &frame2, K_MSEC(100), NULL, NULL);
     
         //activity3
-        //activity0(can_dev, &loud, K_MSEC(100), NULL, NULL);
+       // activity0(can_dev, &loud, K_MSEC(100), NULL, NULL);
     }    
  }
 
  void activity0(const struct device *dev, const struct zcan_frame *msg, k_timeout_t timeout, can_tx_callback_t callback_isr, void *callback_arg){
     int ret;
+    
     ret = can_send(dev, msg, timeout, activity3_callback_tx, NULL);
     if (ret != CAN_TX_OK){
         printk("Sending failed [%d]", ret);
